@@ -5,7 +5,7 @@ article_list = [
   ["Tron Black: Ravencoin Asset FAQ", "https://medium.com/@tronblack/ravencoin-asset-faq-e0d04d460e9b"],
 ]
 
-
+Article.destroy_all
 
 article_list.each do |name, url|
   Article.create ({ :name => name, :url => url })
