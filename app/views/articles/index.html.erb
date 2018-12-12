@@ -2,6 +2,6 @@
 
 <ul>
   <% @articles.each do |article| %>
-    <li> <a href="<%= article.url %>"> <%= article.name %> </a></li> 
+    <li><a href="<%= article.url %>" target="_blank"><%= article.name %> </a></li> 
   <% end %>
 </ul>
