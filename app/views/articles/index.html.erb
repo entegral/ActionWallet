@@ -1,0 +1,7 @@
+<h1>Articles about Crypto</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li> <a href="<%= article.url %>"> <%= article.name %> </a></li> 
+  <% end %>
+</ul>
