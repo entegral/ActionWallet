@@ -21,9 +21,9 @@
         <% end %>
       </div>
       <nav class="nav-box">
-        <a class="nav-link" href="#accounts-path">Accounts</a><span class="pipe">|</span>
+        <%= link_to 'Accounts', accounts_path %><span class="pipe">|</span>
         <a class="nav-link" href="#networks-path">Networks</a><span class="pipe">|</span>
-        <a class="nav-link" href="/articles">Learn</a>
+        <%= link_to 'Learn', articles_path %>
       </nav>
     </header>
     <main>
