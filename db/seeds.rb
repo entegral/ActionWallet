@@ -7,10 +7,21 @@ article_list = [
   ["Ravencoin.org", "https://ravencoin.org"]
 ]
 
+user_list = [
+  ["user", "password"]
+]
+
+User.destroy_all
 Article.destroy_all
 
 article_list.each do |name, url|
   Article.create ({ :name => name, :url => url })
 end
 
+
+user_list.each do |username, password|
+  User.create ({ :username => username, :password => password })
+end
+
 p "Created #{Article.count} article(s)"
+p "Created #{User.count} user(s)"

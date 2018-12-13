@@ -35,12 +35,19 @@ h1,h2 {
   color: var(--gray)
 }
 
+.header-image {
+  height: 35px;
+  padding-left: 0.5em;
+}
 .title-box a {
   color: var(--gray)
 }
 
+.title-box h1 {
+  display: inline-block;
+}
+
 .title-box h1 a {
-  padding-left: 0.5em;
   color: var(--title);
   font-size: 1.5em;
   text-decoration: none;
