@@ -3,6 +3,7 @@
   --green: #006018;
   --gray: #b0b0b0;
   --light-gray: #f8f8f8;
+  --blue: #0020c0;
   --title: #d0d0d0;
   --link: #000000;
 }
@@ -76,6 +77,16 @@ h1,h2 {
   color: var(--link);
 }
 
+.sign-in-wrapper {
+  display: inline-block;
+}
+
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .sign-in-box {
   display: inline-block;
   border: 1px solid var(--gray);
@@ -95,4 +106,14 @@ h1,h2 {
 }
 
 .sign-in-form form input[type=submit] {
+}
+
+.signup-box {
+  display: inline-block;
+  font-size: 0.85em;
+}
+
+.signup-box a {
+  text-decoration: underline;
+  color: var(--blue);
 }
