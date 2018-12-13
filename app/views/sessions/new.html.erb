@@ -1,9 +1,12 @@
-<h1>Sign In</h1>
-
-<%= form_tag signin_path do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <%= submit_tag "Sign In" %>
-<% end %>
+<section class="sign-in-box">
+  <h2>Sign In</h2>
+  <div class="sign-in-form">
+    <%= form_tag signin_path do %>
+      <%= label_tag :username %>
+      <%= text_field_tag :username %>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+      <%= submit_tag "Sign In" %>
+    <% end %>
+  </div>
+</section>

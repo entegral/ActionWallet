@@ -1,0 +1,98 @@
+:root {
+  --gold: #807800;
+  --green: #006018;
+  --gray: #b0b0b0;
+  --light-gray: #f8f8f8;
+  --title: #d0d0d0;
+  --link: #000000;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Andale Mono", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+main {
+  padding: 1.5em;
+}
+
+h1,h2 {
+  margin: 0;
+}
+
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em;
+  background-color: var(--green);
+  color: var(--gray)
+}
+
+.title-box a {
+  color: var(--gray)
+}
+
+.title-box h1 a {
+  padding-left: 0.5em;
+  color: var(--title);
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.nav-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em;
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+  background-color: var(--green);
+  font-size: 1.3em;
+}
+
+.nav-box a {
+  color: var(--gray);
+}
+
+.nav-box .pipe {
+  color: var(--gold);
+}
+
+.learn-box {
+  display: inline-block;
+  border: 1px solid var(--gray);
+  padding: 1em;
+  border-radius: 5px;
+  background-color: var(--light-gray);
+}
+
+.learn-box a {
+  color: var(--link);
+}
+
+.sign-in-box {
+  display: inline-block;
+  border: 1px solid var(--gray);
+  padding: 1em;
+  border-radius: 5px;
+  background-color: var(--light-gray);
+}
+
+.sign-in-form form {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0.5em;
+}
+
+.sign-in-form form * {
+  margin: 0.3em;
+}
+
+.sign-in-form form input[type=submit] {
+}

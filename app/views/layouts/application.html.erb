@@ -4,14 +4,27 @@
     <title>ActionWallet</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <div class="container">
+    <header>
+      <div class="title-box">
+        <h1><a href="/">Action Wallet</a></h1>
+        <% if current_user %>
+          <span><a href="/signout">Logout</a></span>
+        <% else %>
+          <span><a href="/signin">Login</a></span>
+        <% end %>
+      </div>
+      <nav class="nav-box">
+        <a class="nav-link" href="#accounts-path">Accounts</a><span class="pipe">|</span>
+        <a class="nav-link" href="#networks-path">Networks</a><span class="pipe">|</span>
+        <a class="nav-link" href="/articles">Learn</a>
+      </nav>
+    </header>
+    <main>
       <%= yield %>
-    </div>
+    </main>
   </body>
 </html>

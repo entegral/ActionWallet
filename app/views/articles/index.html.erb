@@ -1,7 +1,8 @@
-<h1>Articles about Crypto</h1>
-
-<ul>
-  <% @articles.each do |article| %>
-    <li><a href="<%= article.url %>" target="_blank"><%= article.name %> </a></li> 
-  <% end %>
-</ul>
+<section class="learn-box">
+  <h2>Articles about Crypto</h2>
+  <ul>
+    <% @articles.each do |article| %>
+      <li><a href="<%= article.url %>" target="_blank"><%= article.name %> </a></li>
+    <% end %>
+  </ul>
+</section>
