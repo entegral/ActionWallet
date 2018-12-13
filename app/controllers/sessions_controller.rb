@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.authenticate(params[:email], params[:password])
+    @user = User.authenticate(params[:username], params[:password])
     if @user
-      flassh[:notice] = "You've signed in."
+      flash[:notice] = "You've signed in."
       session[:user_id] = @user.id
       redirect_to "/"
     else

@@ -12,7 +12,7 @@
       <div class="title-box">
         <h1><a href="/">Action Wallet</a></h1>
         <% if current_user %>
-          <span><a href="/signout">Logout</a></span>
+          <span><span class="hello">Hello <%= current_user.username %></span> <a href="/signout">Logout</a></span>
         <% else %>
           <span><a href="/signin">Login</a></span>
         <% end %>
