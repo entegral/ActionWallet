@@ -2,10 +2,9 @@ require 'faraday'
 require 'json'
 
 class Connection
-  BASE = 'sandbox-api.coinmarketcap.com'
-
+  BASE = 'https://sandbox-api.coinmarketcap.com'
   def self.api
-    Faraday.new(url: Base) do |faraday|
+    Faraday.new(url: BASE) do |faraday|
       faraday.response :logger
       faraday.adapter Faraday.default_adapter
       faraday.headers['Content-Type'] = 'application/json'
