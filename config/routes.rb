@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
 
-  resources :articles
+  resources :articles, :only => [:index]
 end
