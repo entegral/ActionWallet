@@ -20,10 +20,16 @@ body {
 
 main {
   padding: 1.5em;
+  font-family: Tahoma, sans-serif;
+  font-size: 1.8rem;
 }
 
 h1,h2 {
   margin: 0;
+}
+
+.alert {
+  color: #f00000;
 }
 
 .title-box {

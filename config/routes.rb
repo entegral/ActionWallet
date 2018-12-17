@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
-  root :to => 'articles#index'
+  root :to => 'users#index'
 
   get '/signup' => 'users#new'
-  post'/users' => 'users#create'
 
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
+  get '/users/:user_id/accounts_validate' => 'accounts#validate'
+  get '/users/:user_id/restore_account' => 'accounts#restore'
 
-  resources :articles
   resources :networks, :only => [:index]
+  resources :users, :only => [:create] do
+    resources :accounts, :only => [:index, :show, :new, :create]
+  end
+  resources :articles, :only => [:index]
 end

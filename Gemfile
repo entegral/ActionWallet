@@ -39,7 +39,10 @@ gem 'jquery-rails'
 gem 'bootstrap'
 gem 'dotenv-rails'
 gem 'faraday'
-
+# BIP0032
+gem 'money-tree'
+# BIP0039
+gem 'bip_mnemonic', '~> 0.0.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
