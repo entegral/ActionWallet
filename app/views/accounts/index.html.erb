@@ -1,6 +1,6 @@
 <% if current_user %>
 <h2>Generate Your Random Seed</h2>
-<a href="#">Done</a>
+<%= link_to "New Account", new_user_account_path %>
 <h3>Accounts</h3>
 <ul>
 <% current_user.accounts.each do |account| %>
