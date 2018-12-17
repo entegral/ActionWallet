@@ -21,7 +21,11 @@
         <% end %>
       </div>
       <nav class="nav-box">
-        <%= link_to 'Accounts', accounts_path %><span class="pipe">|</span>
+        <% if current_user %>
+          <%= link_to 'Accounts', user_accounts_path(current_user) %><span class="pipe">|</span>
+        <% else %>
+          <%= link_to 'Accounts', signin_path %><span class="pipe">|</span>
+        <% end %>
         <a class="nav-link" href="#networks-path">Networks</a><span class="pipe">|</span>
         <%= link_to 'Learn', articles_path %>
       </nav>
