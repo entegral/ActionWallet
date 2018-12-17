@@ -7,9 +7,9 @@ article_list = [
   ["Ravencoin.org", "https://ravencoin.org"]
 ]
 user_list = [
-  ["user0", "pass", "obtain occur ivory sure hundred mask oil slot fatal vault swamp swamp"],
-  ["user1", "pass", "glory people gallery position gold unique clean owner tired shine limit dignity"],
-  ["user2", "pass", nil]
+  ["user0", "pass", "obtain occur ivory sure hundred mask oil slot fatal vault swamp swamp", true],
+  ["user1", "pass", "glory people gallery position gold unique clean owner tired shine limit dignity", true],
+  ["user2", "pass", nil, nil]
 ]
 account_list = [
   ["1", "Savings0", "175", "0"],
@@ -26,9 +26,9 @@ Account.destroy_all
 article_list.each do |name, url|
   Article.create ({ :name => name, :url => url })
 end
-user_list.each do |username, password, words|
+user_list.each do |username, password, words, confirmed|
   key = words ? BipMnemonic.to_seed(mnemonic: words) : nil
-  User.create ({ :username => username, :password => password, :master_key => key })
+  User.create ({ :username => username, :password => password, :master_key => key, :confirmed => confirmed })
 end
 account_list.each do |user_id, name, coin, account_index|
   Account.create ({ :user_id => user_id, :name => name, :coin => coin, :account_index => account_index })

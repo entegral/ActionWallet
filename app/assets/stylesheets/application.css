@@ -119,6 +119,7 @@ h1,h2 {
 }
 
 .sign-in-form form input[type=submit] {
+  grid-column: 2 / 3;
 }
 
 .signup-box {
