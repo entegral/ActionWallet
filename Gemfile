@@ -37,7 +37,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jquery-rails'
 gem 'bootstrap'
-
+# BIP0032
+gem 'money-tree'
+# BIP0039
+gem 'bip_mnemonic', '~> 0.0.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
