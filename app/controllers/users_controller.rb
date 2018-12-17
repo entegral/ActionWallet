@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to "/"
     else
-      flash[:alert] = "There was a problem signing up."
+      flash[:alert] = "There was a problem signing up. Make sure that your passwords match"
       redirect_to '/signup'
     end
   end
