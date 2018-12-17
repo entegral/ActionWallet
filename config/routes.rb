@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root :to => 'articles#index'
-  
+
   get '/signup' => 'users#new'
   post'/users' => 'users#create'
 
@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy'
 
   resources :articles
+  resources :networks, :only => [:index]
 end

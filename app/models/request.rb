@@ -1,3 +1,6 @@
+require 'faraday'
+require 'json'
+
 class Request
   class << self
     def where(resource_path, query = {}, options = {})

@@ -1,14 +1,11 @@
 module CoinMarketCap
   class TickerInfo
-    MAX_LIMIT = 10
-    attr_accessor :transactions
-    def initialize(args = {})
-      super(args)
-      self.transactions = parse_transactions(args)
-    end
-
-    def parse_transactions(args = {})
-      params.fetch("data").fetch("market_pairs").each do |market_pair|
+    def self.get_currency_details(currency_id)
+      response = Request.where('/v1/cryptocurrency/quotes/latest', {id: currency_id})
+      details = response.fetch("data").fetch("#{currency_id}")
+      name = details.fetch("name")
+      price = details.fetch("quote").fetch("USD").fetch("price")
+      details = {:name => name, :price => price}
     end
   end
 end
