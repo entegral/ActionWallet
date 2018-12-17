@@ -28,6 +28,10 @@ h1,h2 {
   margin: 0;
 }
 
+.alert {
+  color: #f00000;
+}
+
 .title-box {
   display: flex;
   justify-content: space-between;
