@@ -5,7 +5,16 @@
 <h4>Addresses</h4>
 <ul>
 <% @account.addresses.each do |address| %>
-  <li><%= address.bip32_address(true) %> <%= address.public_address(current_user.master_key, true) %> <%= address.label %></li>
+  <li class="addresses">
+    <div class="address">
+      <p><span class="label">Label</span><%= address.label %></p>
+      <p><span class="label">BIP0032 Path</span><%= address.bip32_address(true) %></p>
+      <p><span class="label">Public Address</span><%= address.public_address(current_user.master_key, true) %></p>
+      <iframe class="details" src="https://api.blockcypher.com/v1/btc-testnet/main/addrs/<%= address.public_address(current_user.master_key, true) %>/balance/" frameborder="0"></iframe>
+      <iframe class="details" src="https://live.blockcypher.com/widget/btc-testnet/<%= address.public_address(current_user.master_key, true) %>/balance/" frameborder="0"></iframe>
+    </div>
+  </li>
+
 <% end %>
 </ul>
 <%= link_to "Add Address", new_account_address_path(@account)%>

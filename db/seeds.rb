@@ -7,15 +7,16 @@ article_list = [
   ["Ravencoin.org", "https://ravencoin.org"]
 ]
 user_list = [
-  ["user0", "pass", "obtain occur ivory sure hundred mask oil slot fatal vault swamp swamp", true],
-  ["user1", "pass", "glory people gallery position gold unique clean owner tired shine limit dignity", true],
-  ["user2", "pass", nil, nil]
+  ["Rohan", "pass", "obtain occur ivory sure hundred mask oil slot fatal vault swamp swamp", true],
+  ["Rob", "pass", "glory people gallery position gold unique clean owner tired shine limit dignity", true],
+  ["Daniel", "pass", "useless busy action lizard school buyer supply hour iron royal rib table", true],
+  ["Phil", "pass", "else soft butter fruit lottery like unable nuclear retreat wasp armed idle", true]
 ]
 account_list = [
-  ["1", "Savings0", "175", "0"],
-  ["1", "Checking0", "175", "1"],
-  ["2", "Savings1", "175", "0"],
-  ["2", "Checking1", "175", "1"]
+  ["1", "Deposit", "1", "0"],
+  ["2", "Deposit", "1", "0"],
+  ["3", "Deposit", "1", "0"],
+  ["4", "Deposit", "1", "0"]
 ]
 
 
