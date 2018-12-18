@@ -15,7 +15,7 @@
 </ol>
 <%end%>
 
-<p>Dont like these words as your seed?  <%= link_to "Click here for new words!", user_accounts_path%></p>
+<p>Dont like these words as your seed?  <%= link_to "Click here for new words!", user_path(current_user) %></p>
 
 <a href="/users/<%=current_user.id%>/accounts_validate">Continue to Validate Words</a>
 
