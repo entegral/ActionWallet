@@ -6,12 +6,15 @@ Rails.application.routes.draw do
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
-  get '/users/:user_id/accounts_validate' => 'accounts#validate'
-  get '/users/:user_id/restore_account' => 'accounts#restore'
+  get '/users/:user_id/accounts_validate' => 'users#validate'
+  get '/users/:user_id/restore_account' => 'users#restore'
 
   resources :networks, :only => [:index]
-  resources :users, :only => [:create] do
-    resources :accounts, :only => [:index, :show, :new, :create]
+  resources :users, :only => [:create, :update, :show] do
+    resources :accounts, :only => [:new, :create, :show]
   end
   resources :articles, :only => [:index]
+  resources :accounts, :only => [] do
+    resource :addresses
+  end
 end

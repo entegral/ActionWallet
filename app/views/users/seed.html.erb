@@ -3,11 +3,11 @@
 <p>Do NOT take a photo of them, use a pen/pencil + paper and write them physically down (ideally twice)</p>
 <p>This is your ONLY way to recover your coins should you lose access to this wallet. With this recovery phrase your coins can be recovered using any BIP0039/BIP0044 compliant wallet (most are compliant!)</p>
 
-<h2 class="alert"> <%= flash[:alert] %></h2>
+<h2 class="alert"><%= flash[:alert] %></h2>
 
-<% if @words %>
+<% if session[:words] %>
 <ol>
-  <% @words.each do |word|%>
+  <% session[:words].each do |word|%>
   <li>
     <%= word %>
   </li>
@@ -15,7 +15,7 @@
 </ol>
 <%end%>
 
-<p>Dont like these words as your seed?  <%= link_to "Click here for new words!", user_accounts_path%></p>
+<p>Dont like these words as your seed?  <%= link_to "Click here for new words!", user_path(current_user) %></p>
 
 <a href="/users/<%=current_user.id%>/accounts_validate">Continue to Validate Words</a>
 

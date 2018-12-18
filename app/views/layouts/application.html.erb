@@ -22,7 +22,7 @@
       </div>
       <nav class="nav-box">
         <% if current_user %>
-          <%= link_to 'Accounts', user_accounts_path(current_user) %><span class="pipe">|</span>
+          <%= link_to 'Accounts', user_path(current_user) %><span class="pipe">|</span>
         <% else %>
           <%= link_to 'Accounts', signin_path %><span class="pipe">|</span>
         <% end %>
