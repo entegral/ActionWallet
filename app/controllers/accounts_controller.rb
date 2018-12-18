@@ -6,14 +6,20 @@ class AccountsController < ApplicationController
 
   def new
     if current_user.confirmed
-      # go to route for adding new bip0032 address parameter
+      @account = Account.new
       render :new
     else
+      flash[:alert] = "Please validate your seed words"
+      redirect_to user_account(current_user)
     end
   end
 
   def create
-    "Create account here"
+    parameters = account_params
+    parameters[:account_index] = current_user.accounts.count
+    parameters[:coin] = 0
+    current_user.accounts.create(parameters)
+    redirect_to  user_path(current_user)
   end
 
   def show
@@ -22,5 +28,10 @@ class AccountsController < ApplicationController
     else
       redirect_to accounts_path
     end
+  end
+
+private
+  def account_params
+    params.require(:account).permit(:name)
   end
 end
