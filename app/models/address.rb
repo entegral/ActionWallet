@@ -10,6 +10,10 @@ class Address < ActiveRecord::Base
   def public_address(master_key, isTest = false)
     master = MoneyTree::Master.new seed_hex: master_key
     node = master.node_for_path bip32_address(isTest)
-    node.to_address
+    if isTest
+      node.to_address(true, network: :bitcoin_testnet)
+    else
+      node.to_address
+    end
   end
 end
