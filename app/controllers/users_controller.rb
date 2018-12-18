@@ -28,7 +28,9 @@ class UsersController < ApplicationController
   def update
     if session[:words]
       if session[:words].include?(params[:word1]) && session[:words].include?(params[:word2]) && session[:words].include?(params[:word3]) && session[:words].include?(params[:word4]) && session[:words].include?(params[:word5]) && session[:words].include?(params[:word6]) && session[:words].include?(params[:word7]) && session[:words].include?(params[:word8]) && session[:words].include?(params[:word9]) && session[:words].include?(params[:word10]) && session[:words].include?(params[:word11]) && session[:words].include?(params[:word12])
-        master_key = BipMnemonic.to_seed(mnemonic: session[:words].join(" "))
+        mnemonic = session[:words].join(" ")
+
+        master_key = BipMnemonic.to_seed(mnemonic: mnemonic)
         current_user.update({:master_key => master_key, :confirmed => true, :password => params[:password] })
         session[:words] = ""
         flash[:alert] = ""
@@ -52,10 +54,10 @@ class UsersController < ApplicationController
       word12 = params[:word12]
       mnemonic = [word1,word2,word3,word4,word5,word6,word7,word8,word9,word10,word11,word12].join(" ")
 
-      @user = current_user
-      @user.master_key = BipMnemonic.to_seed(mnemonic: mnemonic)
-      @user.confirmed = true
-      @user.save
+      master_key = BipMnemonic.to_seed(mnemonic: mnemonic)
+      current_user.update({:master_key => master_key, :confirmed => true, :password => params[:password] })
+      session[:words] = ""
+      flash[:alert] = ""
       redirect_to user_accounts_path(@user)
     end
   end
