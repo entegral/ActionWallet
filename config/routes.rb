@@ -14,7 +14,5 @@ Rails.application.routes.draw do
     resources :accounts, :only => [:new, :create, :show]
   end
   resources :articles, :only => [:index]
-  resources :accounts, :only => [] do
-    resource :addresses
-  end
+  resource :addresses, :only => [:new, :create]
 end
