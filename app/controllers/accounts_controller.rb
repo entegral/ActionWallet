@@ -25,6 +25,7 @@ class AccountsController < ApplicationController
   def show
     if Account.find(params[:id]).user == current_user
       @account = current_user.accounts.find(params[:id])
+      @bip32_path = "m/44'/1'/#{@account.account_index}'"
     else
       redirect_to accounts_path
     end
