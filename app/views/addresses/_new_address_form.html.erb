@@ -1,4 +1,4 @@
-<%= form_for @address do |f| %>
+<%= form_for [@account, @address] do |f| %>
   <%= f.label "Label" %>
   <%= f.text_field :label %>
   <%= f.submit "Create Address" %>
