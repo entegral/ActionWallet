@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :networks, :only => [:index]
   resources :users, :only => [:create, :update, :show] do
-    resources :accounts, :only => [:show, :new, :create]
+    resources :accounts, :only => [:new, :create, :show]
   end
   resources :articles, :only => [:index]
   resources :accounts, :only => [] do

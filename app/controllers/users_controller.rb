@@ -33,10 +33,10 @@ class UsersController < ApplicationController
         @user.confirmed = true
         @user.save
         session[:words] = ""
-        redirect_to user_accounts_path
+        flash[:alert] = ""
+        redirect_to user_path(@user)
       else
         flash[:alert] = "The words you entered do not match the words that we gave you. Here they are again..."
-        @words = session[:words]
         render :seed
       end
     else

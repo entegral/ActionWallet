@@ -4,15 +4,16 @@ class AccountsController < ApplicationController
 
   before_action :authorize, only: [:show]
 
-  def index
-  end
-
   def new
     if current_user.confirmed
       # go to route for adding new bip0032 address parameter
       render :new
     else
     end
+  end
+
+  def create
+    "Create account here"
   end
 
   def show
