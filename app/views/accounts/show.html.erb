@@ -1,4 +1,11 @@
 <% if @account %>
 <h2><%= @account.name %></h2>
 <% end %>
-<h4>Account Path: <%= @bip32_path %></h4>
+
+<h4>Addresses</h4>
+<ul>
+<% @account.addresses.each do |address| %>
+  <li><%= address.bip32_address(true) %> <%= address.public_address(current_user.master_key, true) %> <%= address.label %></li>
+<% end %>
+</ul>
+<%= link_to "Add Address", new_account_address_path(@account)%>
