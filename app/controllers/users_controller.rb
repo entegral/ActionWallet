@@ -28,13 +28,11 @@ class UsersController < ApplicationController
   def update
     if session[:words]
       if session[:words].include?(params[:word1]) && session[:words].include?(params[:word2]) && session[:words].include?(params[:word3]) && session[:words].include?(params[:word4]) && session[:words].include?(params[:word5]) && session[:words].include?(params[:word6]) && session[:words].include?(params[:word7]) && session[:words].include?(params[:word8]) && session[:words].include?(params[:word9]) && session[:words].include?(params[:word10]) && session[:words].include?(params[:word11]) && session[:words].include?(params[:word12])
-        @user = current_user
-        @user.master_key = BipMnemonic.to_seed(mnemonic: session[:words].join(" "))
-        @user.confirmed = true
-        @user.save
+        master_key = BipMnemonic.to_seed(mnemonic: session[:words].join(" "))
+        current_user.update({:master_key => master_key, :confirmed => true, :password => params[:password] })
         session[:words] = ""
         flash[:alert] = ""
-        redirect_to user_path(@user)
+        redirect_to user_path(current_user)
       else
         flash[:alert] = "The words you entered do not match the words that we gave you. Here they are again..."
         render :seed
