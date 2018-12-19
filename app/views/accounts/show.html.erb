@@ -10,7 +10,7 @@
       <p><span class="label">Label</span><%= address.label %></p>
       <p><span class="label">BIP0032 Path</span><%= address.bip32_address(true) %></p>
       <p><span class="label">Public Address</span><%= address.public_address(current_user.master_key, true) %></p>
-      <p><span class="label">Address Balance</span><%= address.total %></p>
+      <p><span class="label">Address Balance</span><%= address.total %> BTC</p>
         <%= raw @qrcodes[@account.addresses.index(address)].as_html %>
       </div>
     </div>
