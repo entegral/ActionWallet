@@ -43,6 +43,9 @@ gem 'faraday'
 gem 'money-tree'
 # BIP0039
 gem 'bip_mnemonic', '~> 0.0.2'
+
+gem 'blockcypher-ruby'
+
 gem 'rqrcode', '~> 0.10.1'
 
 group :development, :test do
