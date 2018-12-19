@@ -1,3 +1,5 @@
+<h3>Current Coin Prices:</h3>
+
 <% @details.each do |currency| %>
   <p><%= currency.fetch(:name) %>: $<%= currency.fetch(:price) %></p>
 <% end %>
