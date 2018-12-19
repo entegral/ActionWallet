@@ -1,33 +1,36 @@
 
-<h4>Enter the words exactly as you recorded them.</h4>
-
-<%= form_tag user_path(current_user), method: :patch do %>
-  <%= label_tag :word1 %>
-  <%= text_field_tag :word1 %>
-  <%= label_tag :word2 %>
-  <%= text_field_tag :word2 %>
-  <%= label_tag :word3 %>
-  <%= text_field_tag :word3 %>
-  <%= label_tag :word4 %>
-  <%= text_field_tag :word4 %>
-  <%= label_tag :word5 %>
-  <%= text_field_tag :word5 %>
-  <%= label_tag :word6 %>
-  <%= text_field_tag :word6 %>
-  <%= label_tag :word7 %>
-  <%= text_field_tag :word7 %>
-  <%= label_tag :word8 %>
-  <%= text_field_tag :word8 %>
-  <%= label_tag :word9 %>
-  <%= text_field_tag :word9 %>
-  <%= label_tag :word10 %>
-  <%= text_field_tag :word10 %>
-  <%= label_tag :word11 %>
-  <%= text_field_tag :word11 %>
-  <%= label_tag :word12 %>
-  <%= text_field_tag :word12 %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <%= submit_tag %>
-
-<% end %>
+  <h2>Enter the words exactly as you recorded them and your user password.</h2><br>
+  <div class="sign-in-box">
+    <h2>Word Validation</h2>
+  <div class="sign-in-form">
+    <%= form_tag user_path(current_user), method: :patch do %>
+      <%= label_tag :word1 %>
+      <%= text_field_tag :word1 %>
+      <%= label_tag :word2 %>
+      <%= text_field_tag :word2 %>
+      <%= label_tag :word3 %>
+      <%= text_field_tag :word3 %>
+      <%= label_tag :word4 %>
+      <%= text_field_tag :word4 %>
+      <%= label_tag :word5 %>
+      <%= text_field_tag :word5 %>
+      <%= label_tag :word6 %>
+      <%= text_field_tag :word6 %>
+      <%= label_tag :word7 %>
+      <%= text_field_tag :word7 %>
+      <%= label_tag :word8 %>
+      <%= text_field_tag :word8 %>
+      <%= label_tag :word9 %>
+      <%= text_field_tag :word9 %>
+      <%= label_tag :word10 %>
+      <%= text_field_tag :word10 %>
+      <%= label_tag :word11 %>
+      <%= text_field_tag :word11 %>
+      <%= label_tag :word12 %>
+      <%= text_field_tag :word12 %>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+      <%= submit_tag %>
+    <% end %>
+  </div>
+</div>
