@@ -6,13 +6,15 @@
 <h2 class="alert"><%= flash[:alert] %></h2>
 
 <% if session[:words] %>
-<ol>
-  <% session[:words].each do |word|%>
-  <li>
-    <%= word %>
-  </li>
-  <% end %>
-</ol>
+<div class="sign-in-box">
+  <ol class="word-list">
+    <% session[:words].each do |word|%>
+    <li>
+      <%= word %>
+    </li>
+    <% end %>
+  </ol>
+</div>
 <%end%>
 
 <p>Dont like these words as your seed?  <%= link_to "Click here for new words!", user_path(current_user) %></p>

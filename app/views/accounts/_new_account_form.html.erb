@@ -1,5 +1,10 @@
-<%= form_for [current_user, @account] do |f| %>
-  <%= f.label "Account Name" %>
-  <%= f.text_field :name %>
-  <%= f.submit "Create Account" %>
-<% end %>
+<div class="sign-in-box">
+  <h2>Create Account</h2>
+<div class="sign-in-form">
+  <%= form_for [current_user, @account] do |f| %>
+    <%= f.label "Account Name" %>
+    <%= f.text_field :name %>
+    <%= f.submit "Create Account" %>
+  <% end %>
+  </div>
+</div>
