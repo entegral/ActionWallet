@@ -1,13 +1,13 @@
 :root {
-  --gold: #888000;
-  --green: #006018;
-  --green1: #309048;
+  --gold: #989000;
+  --green: #1a702a;
+  --green1: #309042;
   --green-shadow: #024004;
   --gray: #b0b0b0;
   --light-gray: #f8f8f8;
   --blue: #0020c0;
   --title: #d0d0d0;
-  --title-link: #c8c8c8;
+  --title-link: #d0d0d0;
   --link: #000000;
 }
 
@@ -18,17 +18,17 @@ html {
 
 body {
   margin: 0;
-  height: 100vh;
-  background-image: linear-gradient(160deg, #ffffff, #e8e8e8);
   font-size: 1.8rem;
-  overflow-x: hidden;
 }
 
 main {
   padding: 1.5em;
+  background: linear-gradient(135deg, white, rgba(255,0,0,0) 70%),
+              linear-gradient(240deg, #9f9c67, rgba(0,255,0,0) 70%),
+              linear-gradient(336deg, #c2c0b4, rgba(0,0,255,0) 40%);
 }
 
-.big-logo {
+/* .big-logo {
   position: absolute;
   top: 8em;
   left: -6em;
@@ -39,7 +39,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-}
+} */
 
 header {
   background-image: linear-gradient(160deg, var(--green), var(--green1));
