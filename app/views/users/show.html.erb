@@ -1,7 +1,10 @@
 <% if current_user %>
-<h2>Generate Your Random Seed</h2>
+<div class="link-box">
 <%= link_to "New Account", new_user_account_path(current_user) %>
-<h3>Accounts</h3>
+</div>
+<div class="sign-in-box">
+  <h2>Accounts</h2>
+
 <ul>
 <% current_user.accounts.each do |account| %>
   <li>
@@ -12,4 +15,5 @@
   </li>
 <% end %>
 </ul>
+</div>
 <% end %>

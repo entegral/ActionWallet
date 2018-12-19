@@ -181,7 +181,10 @@ h1,h2 {
   margin-top: 0;
   margin-bottom: 0;
 }
-
+.address-box{
+  display: grid;
+  grid-template-columns: auto auto;
+}
 .addresses {
   list-style: none;
 }
@@ -205,29 +208,35 @@ h1,h2 {
   border: 1px solid #808080;
 }
 
+.qrcode {
+  width:100px;
+  background-color: #80f;
+}
 
-table {
+.qrcode table {
   margin: 25px 0px 25px 70px;
   width: 50%;
   border-width: 0;
   border-style: none;
   border-color: #0000ff;
   border-collapse: collapse;
+  background-color: #08f;
 }
 
-td {
+.qrcode td {
   border-left: solid 10px #000;
   padding: 0;
   margin: 0;
   height: 10px;
+  background-color: #0f8;
 }
 
+.qrcode td.black {
+  border-color: #000;
+  background-color: #f80;
+}
 
-td.black { border-color: #000; }
-td.white { border-color: #fff; }
-
-
-
-.qrcode {
-  width:100px;
+.qrcode td.white {
+  border-color: #fff;
+  background-color: #f08;
 }
