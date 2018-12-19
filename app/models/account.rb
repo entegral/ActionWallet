@@ -8,7 +8,7 @@ class Account < ActiveRecord::Base
   validates :user_id, :name, :coin, :account_index, :presence => true
 
   def total
-    block_cypher = BlockCypher::Api.new(currency:BlockCypher::BTC, network:BlockCypher::TEST_NET_3, api_token:"772f7e3b20e74c4881c1e0d5c8e7e1c4")
+    block_cypher = BlockCypher::Api.new(currency:BlockCypher::BTC, network:BlockCypher::TEST_NET_3, api_token:"9883c337be71449c9df67696fa5e271f")
 
     total = 0.00000000
     self.addresses.each do |address|

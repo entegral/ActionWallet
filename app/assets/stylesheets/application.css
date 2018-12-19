@@ -181,10 +181,12 @@ h1,h2 {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .address-box{
   display: grid;
   grid-template-columns: auto auto;
 }
+
 .addresses {
   list-style: none;
 }
@@ -209,8 +211,7 @@ h1,h2 {
 }
 
 .qrcode {
-  background-color: #80f;
-  text-align: center;
+  padding-left: 50px;
 }
 
 table {
@@ -219,7 +220,6 @@ table {
   border-style: none;
   border-color: #0000ff;
   border-collapse: collapse;
-  background-color: #08f;
 }
 
 tr {
@@ -231,15 +231,12 @@ td {
   padding: 0;
   margin: 0;
   height: 10px;
-  background-color: #0f8;
 }
 
 td.black {
   border-color: #000;
-  background-color: #f80;
 }
 
 td.white {
   border-color: #fff;
-  background-color: #f08;
 }
