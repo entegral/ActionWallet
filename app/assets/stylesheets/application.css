@@ -209,12 +209,11 @@ h1,h2 {
 }
 
 .qrcode {
-  width:100px;
   background-color: #80f;
+  text-align: center;
 }
 
-.qrcode table {
-  margin: 25px 0px 25px 70px;
+table {
   width: 50%;
   border-width: 0;
   border-style: none;
@@ -223,7 +222,11 @@ h1,h2 {
   background-color: #08f;
 }
 
-.qrcode td {
+tr {
+  height: 10px;
+}
+
+td {
   border-left: solid 10px #000;
   padding: 0;
   margin: 0;
@@ -231,12 +234,12 @@ h1,h2 {
   background-color: #0f8;
 }
 
-.qrcode td.black {
+td.black {
   border-color: #000;
   background-color: #f80;
 }
 
-.qrcode td.white {
+td.white {
   border-color: #fff;
   background-color: #f08;
 }
