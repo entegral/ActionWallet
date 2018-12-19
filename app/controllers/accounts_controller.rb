@@ -1,4 +1,6 @@
 require 'bip_mnemonic'
+require 'rqrcode'
+
 
 class AccountsController < ApplicationController
 
@@ -26,6 +28,11 @@ class AccountsController < ApplicationController
     if Account.find(params[:id]).user == current_user
       @account = current_user.accounts.find(params[:id])
       @bip32_path = "m/44'/1'/#{@account.account_index}'"
+      @qrcodes = []
+      @account.addresses.each do |address|
+        qr = RQRCode::QRCode.new( address.public_address(current_user.master_key,true), :size => 4, :level => :h )
+        @qrcodes.push(qr)
+      end
     else
       redirect_to accounts_path
     end
