@@ -11,25 +11,27 @@
   <body>
     <div class="big-logo-box">
       <div class="big-logo">
-      </div>  
+      </div>
     </div>
     <header>
       <div class="title-box">
-        <span>
-          <%= image_tag "actionwallet_gold2.png", class: "header-image"%>
-          <h1><a href="/">Action Wallet</a></h1>
-        </span>
-        <% if current_user %>
-          <span><span class="hello">Hello <%= current_user.username %></span> <a href="/signout">Logout</a></span>
-        <% else %>
-          <span><a href="/signin">Login</a></span>
-        <% end %>
+        <div class="title-wrap">
+          <span>
+            <%= image_tag "actionwallet_gold2.png", class: "header-image"%>
+            <h1><a href="/">Action Wallet</a></h1>
+          </span>
+          <% if current_user %>
+            <div class="user-box"><span class="hello">Hello <%= current_user.username %> | </span> <a href="/signout">Logout</a></div>
+            <% else %>
+            <span><a href="/signin">Login</a></span>
+          <% end %>
+        </div>
       </div>
       <nav class="nav-box">
         <% if current_user %>
-          <%= link_to 'Accounts', user_path(current_user) %><span class="pipe">|</span>
+        <%= link_to 'Accounts', user_path(current_user) %><span class="pipe">|</span>
         <% else %>
-          <%= link_to 'Accounts', signin_path %><span class="pipe">|</span>
+        <%= link_to 'Accounts', signin_path %><span class="pipe">|</span>
         <% end %>
         <a class="nav-link" href="/networks">Networks</a><span class="pipe">|</span>
         <%= link_to 'Learn', articles_path %>

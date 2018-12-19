@@ -67,16 +67,15 @@ h1,h2 {
   color: #f00000;
 }
 
-.title-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.0em;
-}
-
 .header-image {
   height: 3.0em;
   padding-left: 0.5em;
+}
+
+.title-box {
+  display: flex;
+  align-items: center;
+  padding: 1.5em;
 }
 
 .title-box a {
@@ -92,6 +91,17 @@ h1,h2 {
 .title-box h1 a {
   color: var(--title);
   text-decoration: none;
+}
+
+.title-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.hello {
+  color: #303030;
 }
 
 .nav-box {
