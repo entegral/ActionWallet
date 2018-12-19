@@ -5,13 +5,14 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Thasadith|Titillium+Web" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <header>
       <div class="title-box">
         <span>
-          <%= image_tag "actionwallet_grey.png", class: "header-image"%>
+          <%= image_tag "actionwallet_gold.png", class: "header-image"%>
           <h1><a href="/">Action Wallet</a></h1>
         </span>
         <% if current_user %>
@@ -31,6 +32,8 @@
       </nav>
     </header>
     <main>
+      <div class="big-logo">
+      </div>
       <%= yield %>
     </main>
   </body>
