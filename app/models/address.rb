@@ -16,4 +16,12 @@ class Address < ActiveRecord::Base
       node.to_address
     end
   end
+
+  def total
+    block_cypher = BlockCypher::Api.new(currency:BlockCypher::BTC, network:BlockCypher::TEST_NET_3, api_token:"772f7e3b20e74c4881c1e0d5c8e7e1c4")
+
+    total = block_cypher.address_final_balance(public_address(self.account.user.master_key, true))
+    total/100000000.00000000
+  end
+
 end
