@@ -1,27 +1,53 @@
 :root {
-  --gold: #807800;
+  --gold: #888000;
   --green: #006018;
+  --green1: #309048;
+  --green-shadow: #024004;
   --gray: #b0b0b0;
   --light-gray: #f8f8f8;
   --blue: #0020c0;
   --title: #d0d0d0;
+  --title-link: #c8c8c8;
   --link: #000000;
 }
 
 html {
   font-size: 10px;
-  font-family: "Andale Mono", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 body {
-  font-size: 1.6rem;
   margin: 0;
+  height: 100vh;
+  background-image: linear-gradient(160deg, #ffffff, #e8e8e8);
+  font-size: 1.8rem;
+  overflow-x: hidden;
 }
 
 main {
   padding: 1.5em;
-  font-family: Tahoma, sans-serif;
-  font-size: 1.8rem;
+}
+
+.big-logo {
+  position: absolute;
+  top: 8em;
+  left: -6em;
+  z-index: -1;
+  width: 1800px;
+  height: 1000px;
+  background-image: url("actionwallet_lightgold2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+header {
+  background-image: linear-gradient(160deg, var(--green), var(--green1));
+  font-family: 'Raleway', sans-serif;
+}
+
+header a {
+  text-decoration: none;
 }
 
 h1,h2 {
@@ -36,26 +62,26 @@ h1,h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2em;
-  background-color: var(--green);
-  color: var(--gray)
+  padding: 2.0em;
 }
 
 .header-image {
-  height: 35px;
+  height: 3.0em;
   padding-left: 0.5em;
 }
+
 .title-box a {
-  color: var(--gray)
+  color: var(--title-link);
 }
 
 .title-box h1 {
   display: inline-block;
+  font-size: 4.0em;
+  text-shadow: 1px 1px var(--green-shadow);
 }
 
 .title-box h1 a {
   color: var(--title);
-  font-size: 1.5em;
   text-decoration: none;
 }
 
@@ -66,12 +92,11 @@ h1,h2 {
   padding: 0.5em;
   border-top: 3px solid var(--gold);
   border-bottom: 3px solid var(--gold);
-  background-color: var(--green);
   font-size: 1.3em;
 }
 
 .nav-box a {
-  color: var(--gray);
+  color: var(--title-link);
 }
 
 .nav-box .pipe {
@@ -153,4 +178,31 @@ h1,h2 {
 .address .details {
   width: 100%;
   border: 1px solid #808080;
+}
+
+
+table {
+  margin: 25px 0px 25px 70px;
+  width: 50%;
+  border-width: 0;
+  border-style: none;
+  border-color: #0000ff;
+  border-collapse: collapse;
+}
+
+td {
+  border-left: solid 10px #000;
+  padding: 0;
+  margin: 0;
+  height: 10px;
+}
+
+
+td.black { border-color: #000; }
+td.white { border-color: #fff; }
+
+
+
+.qrcode {
+  width:100px;
 }
