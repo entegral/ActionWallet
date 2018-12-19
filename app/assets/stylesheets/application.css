@@ -131,3 +131,26 @@ h1,h2 {
   text-decoration: underline;
   color: var(--blue);
 }
+
+.addresses {
+  list-style: none;
+}
+
+.address {
+  display: inline-block;
+  padding: 1.0em;
+  margin: 0.5em;
+  background-color: #f8f8f8;
+  border: 1px solid #808080;
+  border-radius: 3px;
+}
+
+.address .label {
+  color: #585858;
+  margin-right: 1em;
+}
+
+.address .details {
+  width: 100%;
+  border: 1px solid #808080;
+}
