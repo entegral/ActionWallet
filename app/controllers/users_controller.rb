@@ -65,6 +65,11 @@ class UsersController < ApplicationController
   def show
     if current_user
       if current_user.confirmed
+        @wallet_ballance = 0
+        current_user.accounts.each do |account|
+          @wallet_ballance += account.total
+        end
+        @wallet_ballance.round(8)
         render :show
       else
         session[:words] = BipMnemonic.to_mnemonic(bits: 128).split(" ")

@@ -2,6 +2,8 @@
 <h2>Generate Your Random Seed</h2>
 <%= link_to "New Account", new_user_account_path(current_user) %>
 <h3>Accounts</h3>
+<h4> <span class="label">Total Wallet Ballance</span> <%= @wallet_ballance %></h4>
+
 <ul>
 <% current_user.accounts.each do |account| %>
   <li>
