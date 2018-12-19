@@ -4,7 +4,11 @@ article_list = [
   ["Tron Black: Ravencoin as an Asset Platform", "https://medium.com/@tronblack/ravencoin-as-an-asset-platform-6979530d125f"],
   ["Tron Black: Ravencoin Asset FAQ", "https://medium.com/@tronblack/ravencoin-asset-faq-e0d04d460e9b"],
   ["Tron Black: Seeds of Freedom", "https://medium.com/@tronblack/ravencoin-seeds-of-freedom-a3a3ff0fa1"],
-  ["Ravencoin.org", "https://ravencoin.org"]
+  ["Ravencoin.org", "https://ravencoin.org"],
+  ["Want to verify your balance?", "https://www.blockcypher.com/"],
+  ["Need Crypto for your ActionWallet?","https://testnet-faucet.mempool.co/"],
+  ["Hit your limit on the previous faucet? Try this one.","https://coinfaucet.eu/en/btc-testnet/"],
+  ["This faucet seems a bit buggy, but might work.","https://bitcoinfaucet.uo1.net/"]
 ]
 user_list = [
   ["Rohan", "pass", "obtain occur ivory sure hundred mask oil slot fatal vault swamp swamp", true],
