@@ -40,12 +40,14 @@ main {
 }
 
 .big-logo {
-  top: 6em;
-  width: 100%;
+  position: relative;
+  top: 15em;
+  left: 3em;
+  width: 90%;
   height: 100vh;
   background-image: url("actionwallet_lightgold2.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 header {
