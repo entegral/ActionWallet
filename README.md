@@ -24,7 +24,7 @@ _This crypto cold wallet allows secure viewing of all your crypto assets in one 
 
 ## Support and Contact Details
 
-_If you discover a bug or want to make a suggestion or comment, send me an email at rohanpmoore@gmail.com or file an issue on Github._
+_If you discover a bug or want to make a suggestion or comment, send me an email at e2robby@gmail.com or file an issue on Github._
 
 ## Technologies Used
 
