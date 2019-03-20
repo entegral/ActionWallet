@@ -42,7 +42,7 @@ gem 'faraday'
 # BIP0032
 gem 'money-tree'
 # BIP0039
-gem 'bip_mnemonic', '~> 0.0.3'
+gem 'bip_mnemonic', '~> 0.0.3', :git => 'https://github.com/sreekanthgs/bip_mnemonic.git'
 
 gem 'blockcypher-ruby'
 
