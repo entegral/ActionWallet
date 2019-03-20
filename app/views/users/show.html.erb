@@ -11,7 +11,7 @@
   <li>
     <%= link_to account.name, user_account_path(current_user, account) %>
     <ul>
-      <li><strong>Total: <%= account.total %></strong></li>
+      <li><strong>Total: <%= account.total ? account.total : 0 %></strong></li>
     </ul>
   </li>
 <% end %>
